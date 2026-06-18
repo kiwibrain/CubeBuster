@@ -1,0 +1,46 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: cliente-service
+          uri: ${CLIENTE_SERVICE_URL:lb://CLIENTE-SERVICE}
+          predicates:
+            - Path=/api/clientes/**
+        - id: producto-service
+          uri: ${PRODUCTO_SERVICE_URL:lb://PRODUCTO-SERVICE}
+          predicates:
+            - Path=/api/productos/**
+        - id: pedido-service
+          uri: ${PEDIDO_SERVICE_URL:lb://PEDIDO-SERVICE}
+          predicates:
+            - Path=/api/pedidos/**
+        - id: pago-service
+          uri: ${PAGO_SERVICE_URL:lb://PAGO-SERVICE}
+          predicates:
+            - Path=/api/pagos/**
+        - id: despacho-service
+          uri: ${DESPACHO_SERVICE_URL:lb://DESPACHO-SERVICE}
+          predicates:
+            - Path=/api/despachos/**
+
+management:
+  endpoint:
+    gateway:
+      access: read-only
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway
+
+eureka:
+  client:
+    enabled: ${EUREKA_ENABLED:true}
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true

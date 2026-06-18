@@ -1,0 +1,109 @@
+{
+  "info": {
+    "name": "Etapas 02 a 05 - API Gateway puerto 8080",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 GET clientes por Gateway",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/clientes/"
+      }
+    },
+    {
+      "name": "02 GET productos por Gateway",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/productos/"
+      }
+    },
+    {
+      "name": "03 POST pedido por Gateway",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/pedidos/",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"clienteId\": 1,\n  \"productoId\": 1,\n  \"cantidad\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "04 GET pedidos por Gateway",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/pedidos/"
+      }
+    },
+    {
+      "name": "05 POST pago por Gateway",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/pagos/",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pedidoId\": 1,\n  \"metodo\": \"TARJETA\",\n  \"monto\": 700000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "06 GET pagos por Gateway",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/pagos/"
+      }
+    },
+    {
+      "name": "07 POST despacho por Gateway",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/despachos/",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pedidoId\": 1,\n  \"direccion\": \"Av. Siempre Viva 742\",\n  \"comuna\": \"Santiago\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "08 GET despachos por Gateway",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/despachos/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+services:
+  eureka-server:
+    build: ./eureka-server
+    ports:
+      - "8761:8761"
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_URL=http://eureka-server:8761/eureka/
+
+  cliente-service:
+    build: ./cliente-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_URL=http://eureka-server:8761/eureka/
+
+  producto-service:
+    build: ./producto-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_URL=http://eureka-server:8761/eureka/
+
+  pedido-service:
+    build: ./pedido-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka-server
+      - cliente-service
+      - producto-service
+    environment:
+      - EUREKA_URL=http://eureka-server:8761/eureka/
+
+  pago-service:
+    build: ./pago-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - eureka-server
+      - pedido-service
+    environment:
+      - EUREKA_URL=http://eureka-server:8761/eureka/
+
+  despacho-service:
+    build: ./despacho-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - eureka-server
+      - pedido-service
+    environment:
+      - EUREKA_URL=http://eureka-server:8761/eureka/

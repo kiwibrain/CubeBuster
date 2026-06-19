@@ -28,7 +28,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ReclamosApplication.java:10)
+	at com.example.multas.MultasApplication.main(ReclamosApplication.java:10)
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsupported Database: MySQL 8.4
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
@@ -80,7 +80,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ReclamosApplication.java:10)
+	at com.example.multas.MultasApplication.main(ReclamosApplication.java:10)
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsupported Database: MySQL 8.4
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
@@ -164,7 +164,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ReclamosApplication.java:10)
+	at com.example.multas.MultasApplication.main(ReclamosApplication.java:10)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reclamoService': Unsatisfied dependency expressed through field 'clienteClient': Error creating bean with name 'clienteClient' defined in file [C:\Users\Mikela\Documents\DUOC ANALISTA PROGRAMADOR\SEMESTRE 3\FULLSTACK 1\EVAL 3\cubebuster-microservicios\reclamos-service\target\classes\com\example\reclamos\webclient\ClienteClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
@@ -274,7 +274,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ReclamosApplication.java:10)
+	at com.example.multas.MultasApplication.main(ReclamosApplication.java:10)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reclamoService': Unsatisfied dependency expressed through field 'clienteClient': Error creating bean with name 'clienteClient' defined in file [C:\Users\Mikela\Documents\DUOC ANALISTA PROGRAMADOR\SEMESTRE 3\FULLSTACK 1\EVAL 3\cubebuster-microservicios\reclamos-service\target\classes\com\example\reclamos\webclient\ClienteClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
@@ -364,8 +364,8 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2026-06-18 17:18:53 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 17:18:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-06-18 17:18:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-06-18 20:10:52 [main] INFO  c.example.resenas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 16848 (C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
-2026-06-18 20:10:52 [main] INFO  c.example.resenas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-18 20:10:52 [main] INFO  c.example.multas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 16848 (C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
+2026-06-18 20:10:52 [main] INFO  c.example.multas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
 2026-06-18 20:10:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2026-06-18 20:10:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 429 ms. Found 1 JPA repository interface.
 2026-06-18 20:10:56 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
@@ -394,7 +394,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2026-06-18 20:11:01 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-06-18 20:11:01 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:11:01 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-18 20:11:02 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+2026-06-18 20:11:02 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 2026-06-18 20:11:02 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:11:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-06-18 20:11:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -403,7 +403,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2026-06-18 20:11:02 [main] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -426,8 +426,8 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ResenasApplication.java:10)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+	at com.example.multas.MultasApplication.main(ResenasApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -444,7 +444,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
 	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:538)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
@@ -474,8 +474,8 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
 	... 44 common frames omitted
-2026-06-18 20:15:15 [main] INFO  c.example.resenas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 10724 (C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
-2026-06-18 20:15:15 [main] INFO  c.example.resenas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-18 20:15:15 [main] INFO  c.example.multas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 10724 (C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
+2026-06-18 20:15:15 [main] INFO  c.example.multas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
 2026-06-18 20:15:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2026-06-18 20:15:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 457 ms. Found 1 JPA repository interface.
 2026-06-18 20:15:19 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
@@ -504,7 +504,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2026-06-18 20:15:25 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-06-18 20:15:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:15:25 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-18 20:15:25 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+2026-06-18 20:15:25 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 2026-06-18 20:15:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:15:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-06-18 20:15:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -513,7 +513,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2026-06-18 20:15:25 [main] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -536,8 +536,8 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ResenasApplication.java:10)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+	at com.example.multas.MultasApplication.main(ResenasApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'peliculaClient': Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -554,7 +554,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
 	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'peliculaClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\PeliculaClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:538)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
@@ -584,8 +584,8 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
 	... 44 common frames omitted
-2026-06-18 20:16:10 [main] INFO  c.example.resenas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 29184 (C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
-2026-06-18 20:16:10 [main] INFO  c.example.resenas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-18 20:16:10 [main] INFO  c.example.multas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 29184 (C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
+2026-06-18 20:16:10 [main] INFO  c.example.multas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
 2026-06-18 20:16:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2026-06-18 20:16:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 406 ms. Found 1 JPA repository interface.
 2026-06-18 20:16:13 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
@@ -614,7 +614,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2026-06-18 20:16:17 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-06-18 20:16:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:16:18 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-18 20:16:18 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+2026-06-18 20:16:18 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 2026-06-18 20:16:18 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:16:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-06-18 20:16:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -623,7 +623,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2026-06-18 20:16:18 [main] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -646,8 +646,8 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ResenasApplication.java:10)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+	at com.example.multas.MultasApplication.main(ResenasApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -664,7 +664,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
 	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:538)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
@@ -694,8 +694,8 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
 	... 44 common frames omitted
-2026-06-18 20:17:17 [main] INFO  c.example.resenas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 24600 (C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
-2026-06-18 20:17:17 [main] INFO  c.example.resenas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-18 20:17:17 [main] INFO  c.example.multas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 24600 (C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
+2026-06-18 20:17:17 [main] INFO  c.example.multas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
 2026-06-18 20:17:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2026-06-18 20:17:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 351 ms. Found 1 JPA repository interface.
 2026-06-18 20:17:20 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
@@ -724,7 +724,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2026-06-18 20:17:24 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-06-18 20:17:24 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:17:25 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-18 20:17:25 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+2026-06-18 20:17:25 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 2026-06-18 20:17:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:17:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-06-18 20:17:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -733,7 +733,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2026-06-18 20:17:25 [main] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaController': Unsatisfied dependency expressed through field 'resenaService': Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -756,8 +756,8 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.resenas.ResenasApplication.main(ResenasApplication.java:10)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+	at com.example.multas.MultasApplication.main(ResenasApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resenaService': Unsatisfied dependency expressed through field 'juegoClient': Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
@@ -774,7 +774,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
 	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes\com\example\resenas\webclient\JuegoClient.class]: Unexpected exception during bean creation
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'juegoClient' defined in file [C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes\com\example\multas\webclient\JuegoClient.class]: Unexpected exception during bean creation
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:538)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
@@ -804,8 +804,8 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
 	... 44 common frames omitted
-2026-06-18 20:23:42 [main] INFO  c.example.resenas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 18708 (C:\Users\Mikela\Documents\GitHub\CubeBuster\resenas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
-2026-06-18 20:23:42 [main] INFO  c.example.resenas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-18 20:23:42 [main] INFO  c.example.multas.ResenasApplication - Starting ResenasApplication using Java 25.0.2 with PID 18708 (C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
+2026-06-18 20:23:42 [main] INFO  c.example.multas.ResenasApplication - No active profile set, falling back to 1 default profile: "default"
 2026-06-18 20:23:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2026-06-18 20:23:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 366 ms. Found 1 JPA repository interface.
 2026-06-18 20:23:46 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
@@ -836,7 +836,7 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2026-06-18 20:23:50 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-06-18 20:23:51 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-06-18 20:23:51 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8086 (http) with context path '/'
-2026-06-18 20:23:51 [main] INFO  c.example.resenas.ResenasApplication - Started ResenasApplication in 10.104 seconds (process running for 12.319)
+2026-06-18 20:23:51 [main] INFO  c.example.multas.ResenasApplication - Started ResenasApplication in 10.104 seconds (process running for 12.319)
 2026-06-18 20:24:38 [http-nio-8086-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-06-18 20:24:38 [http-nio-8086-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2026-06-18 20:24:38 [http-nio-8086-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
@@ -846,3 +846,136 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2026-06-18 20:25:25 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-18 20:25:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-06-18 20:25:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-19 12:20:04 [main] INFO  com.example.multas.MultaApplication - Starting MultaApplication using Java 25.0.2 with PID 34664 (C:\Users\Mikela\Documents\GitHub\CubeBuster\multas-service\target\classes started by Mikela in C:\Users\Mikela\Documents\GitHub\CubeBuster)
+2026-06-19 12:20:04 [main] INFO  com.example.multas.MultaApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-19 12:20:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-19 12:20:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 573 ms. Found 1 JPA repository interface.
+2026-06-19 12:20:10 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-06-19 12:20:10 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-19 12:20:10 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-19 12:20:10 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 6106 ms
+2026-06-19 12:20:10 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-19 12:20:11 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-19 12:20:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-19 12:20:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-19 12:20:13 [main] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 0, SQLState: 08S01
+2026-06-19 12:20:13 [main] WARN  org.hibernate.orm.jdbc.error - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2026-06-19 12:20:13 [main] WARN  org.hibernate.orm.jdbc - HHH100046: Could not obtain connection to query JDBC database metadata
+org.hibernate.exception.JDBCConnectionException: Unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:80)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.example.multas.MultaApplication.main(MultaApplication.java:10)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
+	... 37 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 50 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 53 common frames omitted
+2026-06-19 12:20:13 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-19 12:20:13 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: MySQLDialect
+	Database version: 8.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: NONE [default NONE]
+	JDBC fetch size: undefined/unknown
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-19 12:20:16 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-19 12:20:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-19 12:20:17 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-19 12:20:18 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-19 12:20:18 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-06-19 12:20:18 [main] INFO  com.example.multas.MultaApplication - Started MultaApplication in 16.005 seconds (process running for 18.34)
+2026-06-19 12:20:26 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-19 12:20:26 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-19 12:20:26 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-06-19 12:20:27 [http-nio-8090-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 608 ms
+2026-06-19 12:20:43 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-19 12:20:43 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-19 12:20:43 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

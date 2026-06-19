@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: multas
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_multas?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+
+
+  springdoc:
+    api-docs:
+      path: /v3/api-docs
+    swagger-ui:
+      path: /swagger-ui.html
+
+server:
+  port: 8090
+
+cliente-service:
+  url: http://localhost:8081
+
+
+logging:
+  level:
+    root: INFO
+    duoc.reclamos: DEBUG
+  file:
+    name: logs/reclamos.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

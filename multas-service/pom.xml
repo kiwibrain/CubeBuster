@@ -12,7 +12,7 @@
 	<artifactId>multas-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>multas</name>
-	<description>Microservicio de Reseñas</description>
+	<description>Microservicio de Multas</description>
 	<url/>
 	<licenses>
 		<license/>

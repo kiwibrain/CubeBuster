@@ -19,7 +19,8 @@
         <module>reservas-service</module>
         <module>reclamos-service</module>
         <module>juegos-service</module>
-        <module>resenas-service</module>
+        <module>multas-service</module>
+        <module>multas-service</module>
     </modules>
     <properties>
         <java.version>21</java.version>

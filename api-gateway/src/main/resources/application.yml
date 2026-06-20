@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8080}
+  port: 8080
 
 spring:
   application:
@@ -7,26 +7,55 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: cliente-service
-          uri: ${CLIENTE_SERVICE_URL:lb://CLIENTE-SERVICE}
+        - id: clientes
+          uri: lb://CLIENTES
           predicates:
-            - Path=/api/clientes/**
-        - id: producto-service
-          uri: ${PRODUCTO_SERVICE_URL:lb://PRODUCTO-SERVICE}
+            - Path=/api/v1/clientes/**
+
+        - id: peliculas
+          uri: lb://PELICULAS
           predicates:
-            - Path=/api/productos/**
-        - id: pedido-service
-          uri: ${PEDIDO_SERVICE_URL:lb://PEDIDO-SERVICE}
+            - Path=/api/v1/peliculas/**
+
+        - id: juegos
+          uri: lb://JUEGOS
           predicates:
-            - Path=/api/pedidos/**
-        - id: pago-service
-          uri: ${PAGO_SERVICE_URL:lb://PAGO-SERVICE}
+            - Path=/api/v1/juegos/**
+
+        - id: reservas
+          uri: lb://RESERVAS
           predicates:
-            - Path=/api/pagos/**
-        - id: despacho-service
-          uri: ${DESPACHO_SERVICE_URL:lb://DESPACHO-SERVICE}
+            - Path=/api/v1/reservas/**
+
+        - id: reclamos
+          uri: lb://RECLAMOS
           predicates:
-            - Path=/api/despachos/**
+            - Path=/api/v1/reclamos/**
+
+        - id: resenas
+          uri: lb://RESENAS
+          predicates:
+            - Path=/api/v1/resenas/**
+
+        - id: multas
+          uri: lb://MULTAS
+          predicates:
+            - Path=/api/v1/multas/**
+
+        - id: pagos
+          uri: lb://PAGOS
+          predicates:
+            - Path=/api/v1/pagos/**
+
+        - id: cupones
+          uri: lb://CUPONES
+          predicates:
+            - Path=/api/v1/cupones/**
+
+        - id: sucursales
+          uri: lb://SUCURSALES
+          predicates:
+            - Path=/api/v1/sucursales/**
 
 management:
   endpoint:
@@ -39,8 +68,6 @@ management:
 
 eureka:
   client:
-    enabled: ${EUREKA_ENABLED:true}
+    enabled: true
     service-url:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
-  instance:
-    prefer-ip-address: true
+      defaultZone: http://localhost:8761/eureka/

@@ -1,4 +1,4 @@
-package duoc.clientes;
+package com.example;
 
 import duoc.clientes.model.Cliente;
 import duoc.clientes.repository.ClienteRepository;

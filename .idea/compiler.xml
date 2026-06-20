@@ -16,15 +16,25 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="sucursales-service" />
         <module name="resenas-service" />
         <module name="cupones-service" />
         <module name="multas-service" />
-        <module name="pagos-service" />
         <module name="clientes-service" />
         <module name="juegos-service" />
         <module name="peliculas-service" />
         <module name="reservas-service" />
         <module name="reclamos-service" />
+      </profile>
+      <profile name="Annotation profile for pagos-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="pagos-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -45,6 +55,7 @@
       <module name="reclamos-service" options="-parameters" />
       <module name="resenas-service" options="-parameters" />
       <module name="reservas-service" options="-parameters" />
+      <module name="sucursales-service" options="-parameters" />
     </option>
   </component>
 </project>

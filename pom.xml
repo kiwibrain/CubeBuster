@@ -23,6 +23,7 @@
         <module>multas-service</module>
         <module>pagos-service</module>
         <module>cupones-service</module>
+        <module>sucursales-service</module>
     </modules>
     <properties>
         <java.version>21</java.version>

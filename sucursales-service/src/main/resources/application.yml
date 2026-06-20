@@ -3,7 +3,7 @@ spring:
     name: sucursales
 
   datasource:
-    url: jdbc:mysql://localhost:3306/db_cupones?createDatabaseIfNotExist=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/db_sucursales?createDatabaseIfNotExist=true&serverTimezone=UTC
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -31,7 +31,7 @@ spring:
       path: /swagger-ui.html
 
 server:
-  port: 8088
+  port: 8089
 
 cliente-service:
   url: http://localhost:8081

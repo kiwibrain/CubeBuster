@@ -1,51 +1,51 @@
+server:
+  port: ${PORT:8086}
+
 spring:
   application:
-    name: resenas
-
+    name: resenas-service
   datasource:
-    url: jdbc:mysql://localhost:3306/db_resenas?createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: root
+    url: jdbc:h2:mem:resenas_service_db;DB_CLOSE_DELAY=-1;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
     password:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.MySQLDialect
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
-  eureka:
-    client:
-      service-url:
-        defaultZone: http://localhost:8761/eureka/
-
-
-  springdoc:
-    api-docs:
-      path: /v3/api-docs
-    swagger-ui:
-      path: /swagger-ui.html
-
-server:
-  port: 8086
-
-cliente-service:
-  url: http://localhost:8081
-pelicula-service:
-  url: http://localhost:8084
-juego-service:
-  url: http://localhost:8085
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
 
 logging:
   level:
     root: INFO
-    duoc.reclamos: DEBUG
-  file:
-    name: logs/reclamos.log
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
-    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    org.springframework.web: WARN
+
+eureka:
+  client:
+    enabled: ${EUREKA_ENABLED:true}
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
+
+app:
+  discovery:
+    enabled: ${APP_DISCOVERY_ENABLED:true}
+
+services:
+  cliente:
+    url: ${CLIENTE_SERVICE_URL:http://cliente-service}
+  peliculas:
+    url: ${PELICULAS_SERVICE_URL:http://peliculas-service}
+  juegos:
+    url: ${JUEGOS_SERVICE_URL:http://juegos-service}

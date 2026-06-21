@@ -8,7 +8,7 @@
       "name": "01 GET clientes por Gateway",
       "request": {
         "method": "GET",
-        "url": "http://localhost:8080/api/clientes/"
+        "url": "http://localhost:8080/api/v1/clientes/"
       }
     },
     {

@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "CubeBuster - Render Online Gateway",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "gateway_url",
+      "value": "https://cubebuster-fullstack-gateway.onrender.com"
+    }
+  ],
+  "item": [
+    { "name": "01 Listar Clientes", "request": { "method": "GET", "url": "{{gateway_url}}/api/v1/clientes/" } },
+    { "name": "02 Listar Películas", "request": { "method": "GET", "url": "{{gateway_url}}/api/v1/peliculas/" } },
+    { "name": "03 Listar Juegos", "request": { "method": "GET", "url": "{{gateway_url}}/api/v1/juegos/" } },
+    { "name": "04 Obtener Sucursales", "request": { "method": "GET", "url": "{{gateway_url}}/api/v1/sucursales/" } },
+    {
+      "name": "05 Crear Reserva",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Reserva Estreno\",\n  \"clienteId\": 1,\n  \"idJuego\": null,\n  \"idPelicula\": 1\n}"
+        },
+        "url": "{{gateway_url}}/api/v1/reservas/"
+      }
+    }
+  ]
+}

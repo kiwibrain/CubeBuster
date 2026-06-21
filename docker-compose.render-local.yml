@@ -1,0 +1,47 @@
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    networks:
+      - cubebuster-network
+    depends_on:
+      - clientes-service
+      - juegos-service
+      # ... (manten tus otros depends_on igual)
+    environment:
+      - SERVER_PORT=8080
+      - PORT=8080
+      - EUREKA_ENABLED=false
+      - CLIENTES_SERVICE_URL=http://clientes-service:8081
+      - JUEGOS_SERVICE_URL=http://juegos-service:8085
+      # ... (manten tus otras variables igual)
+
+  clientes-service:
+    build: ./clientes-service
+    ports:
+      - "8081:8081"
+    networks:
+      - cubebuster-network
+    environment:
+      - SERVER_PORT=8081
+      - PORT=8081
+      - EUREKA_ENABLED=false
+
+  juegos-service:
+    build: ./juegos-service
+    ports:
+      - "8085:8085"
+    networks:
+      - cubebuster-network
+    environment:
+      - SERVER_PORT=8085
+      - PORT=8085
+      - EUREKA_ENABLED=false
+
+# 1. AGREGA LA PROPIEDAD "networks" CON EL MISMO NOMBRE A TODOS LOS DEMÁS SERVICIOS (peliculas, reservas, etc.)
+
+# 2. AGREGA ESTA SECCIÓN COMPLETA AL FINAL DE TU ARCHIVO (AL MISMO NIVEL DE LA PALABBRA SERVICES:)
+networks:
+  cubebuster-network:
+    driver: bridge

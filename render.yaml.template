@@ -1,0 +1,174 @@
+# Render Blueprint - CubeBuster (Free)
+# 11 Servicios Web interconectados de forma directa.
+services:
+  - type: web
+    name: TU-PREFIJO-fullstack-clientes
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/clientes-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+
+  - type: web
+    name: TU-PREFIJO-fullstack-peliculas
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/peliculas-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+
+  - type: web
+    name: TU-PREFIJO-fullstack-juegos
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/juegos-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+
+  - type: web
+    name: TU-PREFIJO-fullstack-sucursales
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/sucursales-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+
+  - type: web
+    name: TU-PREFIJO-fullstack-reservas
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/reservas-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+      - key: APP_DISCOVERY_ENABLED
+        value: false
+      - key: CLIENTE_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-clientes.onrender.com
+      - key: PELICULAS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-peliculas.onrender.com
+      - key: JUEGOS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-juegos.onrender.com
+
+  - type: web
+    name: TU-PREFIJO-fullstack-reclamos
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/reclamos-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+      - key: APP_DISCOVERY_ENABLED
+        value: false
+      - key: CLIENTE_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-clientes.onrender.com
+
+  - type: web
+    name: TU-PREFIJO-fullstack-resenas
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/resenas-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+      - key: APP_DISCOVERY_ENABLED
+        value: false
+      - key: CLIENTE_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-clientes.onrender.com
+      - key: PELICULAS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-peliculas.onrender.com
+      - key: JUEGOS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-juegos.onrender.com
+
+  - type: web
+    name: TU-PREFIJO-fullstack-pagos
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/pagos-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+      - key: APP_DISCOVERY_ENABLED
+        value: false
+      - key: CLIENTE_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-clientes.onrender.com
+
+  - type: web
+    name: TU-PREFIJO-fullstack-cupones
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/cupones-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+      - key: APP_DISCOVERY_ENABLED
+        value: false
+      - key: CLIENTE_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-clientes.onrender.com
+
+  - type: web
+    name: TU-PREFIJO-fullstack-multas
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/multas-service.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+      - key: APP_DISCOVERY_ENABLED
+        value: false
+      - key: CLIENTE_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-clientes.onrender.com
+
+  - type: web
+    name: TU-PREFIJO-fullstack-gateway
+    runtime: docker
+    plan: free
+    dockerfilePath: ./render/docker/api-gateway.Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: EUREKA_ENABLED
+        value: false
+      - key: CLIENTE_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-clientes.onrender.com
+      - key: RESERVAS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-reservas.onrender.com
+      - key: RECLAMOS_SERVICE_URL=https://TU-PREFIJO-fullstack-reclamos.onrender.com
+      - key: PELICULAS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-peliculas.onrender.com
+      - key: JUEGOS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-juegos.onrender.com
+      - key: RESENAS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-resenas.onrender.com
+      - key: PAGOS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-pagos.onrender.com
+      - key: CUPONES_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-cupones.onrender.com
+      - key: SUCURSALES_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-sucursales.onrender.com
+      - key: MULTAS_SERVICE_URL
+        value: https://TU-PREFIJO-fullstack-multas.onrender.com

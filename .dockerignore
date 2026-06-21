@@ -1,0 +1,9 @@
+.git
+.idea
+**/target
+**/.classpath
+**/.project
+**/.settings
+*.log
+README*.md
+docs

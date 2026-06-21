@@ -3,7 +3,7 @@ services:
     name: cb-cliente
     runtime: docker
     plan: free
-    dockerfilePath: ./render/docker/cliente-service.Dockerfile
+    dockerfilePath: ./render/docker/clientes-service.Dockerfile
     dockerContext: .
     healthCheckPath: /actuator/health
     envVars:

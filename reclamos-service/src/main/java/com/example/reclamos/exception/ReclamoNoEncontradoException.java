@@ -1,4 +1,4 @@
-package com.example.cupones.exception;
+package com.example.reclamos.exception;
 
 public class ReclamoNoEncontradoException extends RuntimeException {
 

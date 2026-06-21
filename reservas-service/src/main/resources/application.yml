@@ -37,7 +37,7 @@ server:
   port: 8082
 
 cliente-service:
-  url: http://localhost:8080
+  url: http://localhost:8081
 pelicula-service:
   url: http://localhost:8084
 juego-service:

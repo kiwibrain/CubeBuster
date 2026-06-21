@@ -34,7 +34,7 @@ server:
   port: 8083
 
 cliente-service:
-  url: http://localhost:8080
+  url: http://localhost:8081
 
 logging:
   level:

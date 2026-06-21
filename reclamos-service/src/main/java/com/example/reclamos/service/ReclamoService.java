@@ -1,15 +1,15 @@
-package com.example.cupones.service;
+package com.example.reclamos.service;
 
 import java.util.List;
 import java.util.Map;
 
-import com.example.cupones.dto.ReclamoRequest;
+import com.example.reclamos.dto.ReclamoRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.cupones.model.Reclamo;
-import com.example.cupones.repository.ReclamoRepository;
-import com.example.cupones.webclient.ClienteClient;
+import com.example.reclamos.model.Reclamo;
+import com.example.reclamos.repository.ReclamoRepository;
+import com.example.reclamos.webclient.ClienteClient;
 
 import jakarta.transaction.Transactional;
 

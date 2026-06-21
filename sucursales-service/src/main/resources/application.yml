@@ -33,10 +33,6 @@ spring:
 server:
   port: 8089
 
-cliente-service:
-  url: http://localhost:8081
-
-
 logging:
   level:
     root: INFO

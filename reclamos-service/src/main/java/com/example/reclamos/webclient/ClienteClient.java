@@ -1,4 +1,4 @@
-package com.example.cupones.webclient;
+package com.example.reclamos.webclient;
 
 // Importamos Map porque la respuesta del microservicio cliente
 // será recibida como una estructura tipo clave-valor, similar a un JSON.

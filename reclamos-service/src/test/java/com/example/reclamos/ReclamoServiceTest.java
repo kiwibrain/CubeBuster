@@ -1,10 +1,10 @@
-package com.example.cupones;
+package com.example.reclamos;
 
-import com.example.cupones.dto.ReclamoRequest;
-import com.example.cupones.exception.ReclamoNoEncontradoException;
-import com.example.cupones.model.Reclamo;
-import com.example.cupones.repository.ReclamoRepository;
-import com.example.cupones.service.ReclamoService;
+import com.example.reclamos.dto.ReclamoRequest;
+import com.example.reclamos.exception.ReclamoNoEncontradoException;
+import com.example.reclamos.model.Reclamo;
+import com.example.reclamos.repository.ReclamoRepository;
+import com.example.reclamos.service.ReclamoService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

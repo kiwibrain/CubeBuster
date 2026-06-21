@@ -1,15 +1,16 @@
-package com.example.cupones.controller;
+package com.example.reclamos.controller;
 
 import java.util.List;
 
-import com.example.cupones.dto.ReclamoRequest;
-import com.example.cupones.model.Reclamo;
+import com.example.reclamos.dto.ReclamoRequest;
+import com.example.reclamos.model.Reclamo;
+import com.example.reclamos.service.ReclamoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.cupones.service.ReclamoService;
+import com.example.reclamos.service.ReclamoService;
 
 @RestController
 @RequestMapping("/api/v1/reclamos")

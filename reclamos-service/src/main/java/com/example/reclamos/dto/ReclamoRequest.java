@@ -1,4 +1,4 @@
-package com.example.cupones.dto;
+package com.example.reclamos.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

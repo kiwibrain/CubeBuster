@@ -1,7 +1,7 @@
-package com.example.cupones.exception;
+package com.example.reclamos.exception;
 
 
-import com.example.cupones.dto.ErrorResponse;
+import com.example.reclamos.dto.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

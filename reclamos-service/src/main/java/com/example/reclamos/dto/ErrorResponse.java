@@ -1,4 +1,4 @@
-package com.example.cupones.dto;
+package com.example.reclamos.dto;
 
 import java.time.LocalDateTime;
 

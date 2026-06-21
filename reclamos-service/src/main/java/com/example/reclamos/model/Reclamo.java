@@ -1,4 +1,4 @@
-package com.example.cupones.model;
+package com.example.reclamos.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,7 +1,7 @@
 CREATE TABLE peliculas (
-                           id_pelicula BIGINT PRIMARY KEY AUTO_INCREMENT,
-                           nombre_pelicula VARCHAR(255) NOT NULL,
-                           anio_pelicula INT NOT NULL,
-                           precio_pelicula INT NOT NULL,
-                           categoria_pelicula VARCHAR(255) NOT NULL
+                           idPelicula BIGINT PRIMARY KEY AUTO_INCREMENT,
+                           nombrePelicula VARCHAR(255) NOT NULL,
+                           anioPelicula INT NOT NULL,
+                           precioPelicula INT NOT NULL,
+                           categoriaPelicula VARCHAR(255) NOT NULL
 );

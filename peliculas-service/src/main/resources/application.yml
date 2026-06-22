@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8084}
+  port: ${PORT:8082}
 
 spring:
   application:
@@ -13,8 +13,8 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  flyway:\n    enabled: false
-    locations: classpath:db/migration
+  flyway:
+    enabled: false
   h2:
     console:
       enabled: true

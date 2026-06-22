@@ -2,6 +2,8 @@ server:
   port: ${PORT:8761}
 
 spring:
+  flyway:
+    enabled: false
   application:
     name: eureka-server
 

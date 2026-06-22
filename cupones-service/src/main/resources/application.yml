@@ -13,8 +13,8 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  flyway:\n    enabled: false
-    locations: classpath:db/migration
+  flyway:
+    enabled: false
   h2:
     console:
       enabled: true
@@ -43,4 +43,4 @@ app:
 
 services:
   cliente:
-    url: ${CLIENTE_SERVICE_URL:http://cliente-service}
+    url: ${CLIENTE_SERVICE_URL:http://clientes-service}

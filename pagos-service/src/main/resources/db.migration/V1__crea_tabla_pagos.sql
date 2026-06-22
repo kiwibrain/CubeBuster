@@ -1,7 +1,7 @@
 CREATE TABLE pagos (
                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                       cliente_id BIGINT,
+                       clienteId BIGINT,
                        monto INT NOT NULL,
-                       metodo_pago VARCHAR(255),
-                       fecha_pago DATE
+                       metodoPago VARCHAR(255),
+                       fechaPago DATE
 );

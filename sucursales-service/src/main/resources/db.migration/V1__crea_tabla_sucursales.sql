@@ -1,7 +1,7 @@
 CREATE TABLE sucursales (
                             id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                            nombre_sucursal VARCHAR(255) NOT NULL,
-                            direccion_sucursal VARCHAR(255) NOT NULL,
-                            telefono_sucursal VARCHAR(255),
-                            horario_atencion VARCHAR(255)
+                            nombreSucursal VARCHAR(255) NOT NULL,
+                            direccionSucursal VARCHAR(255) NOT NULL,
+                            telefonoSucursal VARCHAR(255),
+                            horarioAtencion VARCHAR(255)
 );

@@ -1,7 +1,7 @@
 CREATE TABLE juegos (
-                        id_juego BIGINT PRIMARY KEY AUTO_INCREMENT,
-                        nombre_juego VARCHAR(255) NOT NULL,
-                        anio_juego INT NOT NULL,
-                        precio_juego INT NOT NULL,
-                        categoria_juego VARCHAR(255) NOT NULL
+                        idJuego BIGINT PRIMARY KEY AUTO_INCREMENT,
+                        nombreJuego VARCHAR(255) NOT NULL,
+                        anioJuego INT NOT NULL,
+                        precioJuego INT NOT NULL,
+                        categoriaJuego VARCHAR(255) NOT NULL
 );

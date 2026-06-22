@@ -3,45 +3,122 @@ services:
     build: ./api-gateway
     ports:
       - "8080:8080"
-    networks:
-      - cubebuster-network
     depends_on:
       - clientes-service
+      - reservas-service
+      - reclamos-service
+      - peliculas-service
       - juegos-service
-      # ... (manten tus otros depends_on igual)
+      - resenas-service
+      - pagos-service
+      - cupones-service
+      - sucursales-service
+      - multas-service
     environment:
-      - SERVER_PORT=8080
-      - PORT=8080
       - EUREKA_ENABLED=false
       - CLIENTES_SERVICE_URL=http://clientes-service:8081
+      - RESERVAS_SERVICE_URL=http://reservas-service:8082
+      - RECLAMOS_SERVICE_URL=http://reclamos-service:8083
+      - PELICULAS_SERVICE_URL=http://peliculas-service:8084
       - JUEGOS_SERVICE_URL=http://juegos-service:8085
-      # ... (manten tus otras variables igual)
+      - RESENAS_SERVICE_URL=http://resenas-service:8086
+      - PAGOS_SERVICE_URL=http://pagos-service:8087
+      - CUPONES_SERVICE_URL=http://cupones-service:8088
+      - SUCURSALES_SERVICE_URL=http://sucursales-service:8089
+      - MULTAS_SERVICE_URL=http://multas-service:8090
 
   clientes-service:
     build: ./clientes-service
     ports:
       - "8081:8081"
-    networks:
-      - cubebuster-network
     environment:
-      - SERVER_PORT=8081
-      - PORT=8081
+      - EUREKA_ENABLED=false
+
+  reservas-service:
+    build: ./reservas-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - clientes-service
+      - peliculas-service
+      - juegos-service
+    environment:
+      - EUREKA_ENABLED=false
+      - APP_DISCOVERY_ENABLED=false
+      - CLIENTES_SERVICE_URL=http://clientes-service:8081
+      - PELICULAS_SERVICE_URL=http://peliculas-service:8084
+      - JUEGOS_SERVICE_URL=http://juegos-service:8085
+
+  reclamos-service:
+    build: ./reclamos-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - reservas-service
+    environment:
+      - EUREKA_ENABLED=false
+      - APP_DISCOVERY_ENABLED=false
+      - RESERVAS_SERVICE_URL=http://reservas-service:8082
+
+  peliculas-service:
+    build: ./peliculas-service
+    ports:
+      - "8084:8084"
+    environment:
       - EUREKA_ENABLED=false
 
   juegos-service:
     build: ./juegos-service
     ports:
       - "8085:8085"
-    networks:
-      - cubebuster-network
     environment:
-      - SERVER_PORT=8085
-      - PORT=8085
       - EUREKA_ENABLED=false
 
-# 1. AGREGA LA PROPIEDAD "networks" CON EL MISMO NOMBRE A TODOS LOS DEMÁS SERVICIOS (peliculas, reservas, etc.)
+  resenas-service:
+    build: ./resenas-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - peliculas-service
+      - juegos-service
+    environment:
+      - EUREKA_ENABLED=false
+      - APP_DISCOVERY_ENABLED=false
+      - PELICULAS_SERVICE_URL=http://peliculas-service:8084
+      - JUEGOS_SERVICE_URL=http://juegos-service:8085
 
-# 2. AGREGA ESTA SECCIÓN COMPLETA AL FINAL DE TU ARCHIVO (AL MISMO NIVEL DE LA PALABBRA SERVICES:)
-networks:
-  cubebuster-network:
-    driver: bridge
+  pagos-service:
+    build: ./pagos-service
+    ports:
+      - "8087:8087"
+    depends_on:
+      - reservas-service
+    environment:
+      - EUREKA_ENABLED=false
+      - APP_DISCOVERY_ENABLED=false
+      - RESERVAS_SERVICE_URL=http://reservas-service:8082
+
+  cupones-service:
+    build: ./cupones-service
+    ports:
+      - "8088:8088"
+    environment:
+      - EUREKA_ENABLED=false
+
+  sucursales-service:
+    build: ./sucursales-service
+    ports:
+      - "8089:8089"
+    environment:
+      - EUREKA_ENABLED=false
+
+  multas-service:
+    build: ./multas-service
+    ports:
+      - "8090:8090"
+    depends_on:
+      - reservas-service
+    environment:
+      - EUREKA_ENABLED=false
+      - APP_DISCOVERY_ENABLED=false
+      - RESERVAS_SERVICE_URL=http://reservas-service:8082

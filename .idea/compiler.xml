@@ -7,26 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-server" />
-      </profile>
-      <profile name="Annotation profile for Plataforma Pedidos Microservicios - Ruta Incremental" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
-        </processorPath>
         <module name="sucursales-service" />
         <module name="resenas-service" />
         <module name="cupones-service" />
         <module name="multas-service" />
         <module name="pagos-service" />
-        <module name="api-gateway" />
         <module name="clientes-service" />
+        <module name="api-gateway" />
         <module name="juegos-service" />
         <module name="peliculas-service" />
         <module name="reservas-service" />
         <module name="reclamos-service" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

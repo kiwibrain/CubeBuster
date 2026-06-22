@@ -1,109 +1,374 @@
 {
   "info": {
-    "name": "Etapas 02 a 05 - API Gateway puerto 8080",
+    "name": "CubeBuster - Pruebas de Microservicios (Gateway 8080)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
-      "name": "01 GET clientes por Gateway",
-      "request": {
-        "method": "GET",
-        "url": "http://localhost:8080/api/v1/clientes/"
-      }
-    },
-    {
-      "name": "02 GET productos por Gateway",
-      "request": {
-        "method": "GET",
-        "url": "http://localhost:8080/api/productos/"
-      }
-    },
-    {
-      "name": "03 POST pedido por Gateway",
-      "request": {
-        "method": "POST",
-        "url": "http://localhost:8080/api/pedidos/",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+      "name": "📌 CLIENTES",
+      "item": [
+        {
+          "name": "GET - Listar clientes",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/clientes/"
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"clienteId\": 1,\n  \"productoId\": 1,\n  \"cantidad\": 2\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        },
+        {
+          "name": "POST - Crear cliente",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/clientes/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan Pérez\",\n  \"email\": \"juan@email.com\",\n  \"telefono\": \"+56912345678\",\n  \"direccion\": \"Av. Siempre Viva 742\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         }
-      }
+      ]
     },
     {
-      "name": "04 GET pedidos por Gateway",
-      "request": {
-        "method": "GET",
-        "url": "http://localhost:8080/api/pedidos/"
-      }
-    },
-    {
-      "name": "05 POST pago por Gateway",
-      "request": {
-        "method": "POST",
-        "url": "http://localhost:8080/api/pagos/",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+      "name": "🎬 PELICULAS",
+      "item": [
+        {
+          "name": "GET - Listar películas",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/peliculas/"
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"pedidoId\": 1,\n  \"metodo\": \"TARJETA\",\n  \"monto\": 700000\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        },
+        {
+          "name": "POST - Crear película",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/peliculas/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Inception\",\n  \"genero\": \"Ciencia Ficción\",\n  \"anio\": 2010,\n  \"director\": \"Christopher Nolan\",\n  \"duracion\": 148,\n  \"stock\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         }
-      }
+      ]
     },
     {
-      "name": "06 GET pagos por Gateway",
-      "request": {
-        "method": "GET",
-        "url": "http://localhost:8080/api/pagos/"
-      }
-    },
-    {
-      "name": "07 POST despacho por Gateway",
-      "request": {
-        "method": "POST",
-        "url": "http://localhost:8080/api/despachos/",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+      "name": "🎮 JUEGOS",
+      "item": [
+        {
+          "name": "GET - Listar juegos",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/juegos/"
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"pedidoId\": 1,\n  \"direccion\": \"Av. Siempre Viva 742\",\n  \"comuna\": \"Santiago\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        },
+        {
+          "name": "POST - Crear juego",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/juegos/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"The Legend of Zelda\",\n  \"genero\": \"Aventura\",\n  \"plataforma\": \"Nintendo Switch\",\n  \"anio\": 2017,\n  \"stock\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         }
-      }
+      ]
     },
     {
-      "name": "08 GET despachos por Gateway",
-      "request": {
-        "method": "GET",
-        "url": "http://localhost:8080/api/despachos/"
-      }
+      "name": "📅 RESERVAS",
+      "item": [
+        {
+          "name": "GET - Listar reservas",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/reservas/"
+          }
+        },
+        {
+          "name": "POST - Crear reserva",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/reservas/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clienteId\": 1,\n  \"tipoItem\": \"PELICULA\",\n  \"itemId\": 1,\n  \"fechaInicio\": \"2025-01-15\",\n  \"fechaFin\": \"2025-01-20\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "📝 RECLAMOS",
+      "item": [
+        {
+          "name": "GET - Listar reclamos",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/reclamos/"
+          }
+        },
+        {
+          "name": "POST - Crear reclamo",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/reclamos/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reservaId\": 1,\n  \"clienteId\": 1,\n  \"descripcion\": \"El producto llegó dañado\",\n  \"tipo\": \"DAÑO\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "⭐ RESEÑAS",
+      "item": [
+        {
+          "name": "GET - Listar reseñas",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/resenas/"
+          }
+        },
+        {
+          "name": "POST - Crear reseña",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/resenas/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clienteId\": 1,\n  \"tipoItem\": \"PELICULA\",\n  \"itemId\": 1,\n  \"calificacion\": 5,\n  \"comentario\": \"Excelente película, la recomiendo\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "💰 PAGOS",
+      "item": [
+        {
+          "name": "GET - Listar pagos",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/pagos/"
+          }
+        },
+        {
+          "name": "POST - Crear pago",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/pagos/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reservaId\": 1,\n  \"clienteId\": 1,\n  \"monto\": 15000,\n  \"metodoPago\": \"TARJETA_CREDITO\",\n  \"estado\": \"PENDIENTE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🏷️ CUPONES",
+      "item": [
+        {
+          "name": "GET - Listar cupones",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/cupones/"
+          }
+        },
+        {
+          "name": "POST - Crear cupón",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/cupones/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigo\": \"DESCUENTO10\",\n  \"descripcion\": \"10% de descuento en reservas\",\n  \"descuentoPorcentaje\": 10,\n  \"fechaExpiracion\": \"2025-12-31\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "⚠️ MULTAS",
+      "item": [
+        {
+          "name": "GET - Listar multas",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/multas/"
+          }
+        },
+        {
+          "name": "POST - Crear multa",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/multas/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reservaId\": 1,\n  \"clienteId\": 1,\n  \"monto\": 5000,\n  \"motivo\": \"Devolución tardía\",\n  \"estado\": \"PENDIENTE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🏢 SUCURSALES",
+      "item": [
+        {
+          "name": "GET - Listar sucursales",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/sucursales/"
+          }
+        },
+        {
+          "name": "POST - Crear sucursal",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/sucursales/",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Sucursal Centro\",\n  \"direccion\": \"Av. Libertador Bernardo O'Higgins 123\",\n  \"comuna\": \"Santiago\",\n  \"telefono\": \"+56212345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "📊 ACTUATOR - Health Check",
+      "item": [
+        {
+          "name": "GET - Health Check",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/actuator/health"
+          }
+        },
+        {
+          "name": "GET - Gateway Routes",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/actuator/gateway/routes"
+          }
+        },
+        {
+          "name": "GET - Info",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/actuator/info"
+          }
+        }
+      ]
     }
   ]
 }

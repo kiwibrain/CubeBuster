@@ -1,75 +1,53 @@
-server:
-  port: ${PORT:8080}
-
 spring:
-  application:
-    name: api-gateway
   cloud:
     gateway:
       routes:
         - id: clientes
-          uri: ${CLIENTES_SERVICE_URL:lb://CLIENTES}
+          uri: ${CLIENTE_SERVICE_URL:lb://CLIENTE-SERVICE}
           predicates:
             - Path=/api/v1/clientes/**
 
         - id: peliculas
-          uri: ${PELICULAS_SERVICE_URL:lb://PELICULAS}
+          uri: ${PELICULAS_SERVICE_URL:lb://PELICULAS-SERVICE}
           predicates:
             - Path=/api/v1/peliculas/**
 
         - id: juegos
-          uri: ${JUEGOS_SERVICE_URL:lb://JUEGOS}
+          uri: ${JUEGOS_SERVICE_URL:lb://JUEGOS-SERVICE}  e
           predicates:
             - Path=/api/v1/juegos/**
 
         - id: reservas
-          uri: ${RESERVAS_SERVICE_URL:lb://RESERVAS}
+          uri: ${RESERVAS_SERVICE_URL:lb://RESERVAS-SERVICE}
           predicates:
             - Path=/api/v1/reservas/**
 
         - id: reclamos
-          uri: ${RECLAMOS_SERVICE_URL:lb://RECLAMOS}
+          uri: ${RECLAMOS_SERVICE_URL:lb://RECLAMOS-SERVICE}
           predicates:
             - Path=/api/v1/reclamos/**
 
         - id: resenas
-          uri: ${RESENAS_SERVICE_URL:lb://RESENAS}
+          uri: ${RESENAS_SERVICE_URL:lb://RESENAS-SERVICE}
           predicates:
             - Path=/api/v1/resenas/**
 
         - id: multas
-          uri: ${MULTAS_SERVICE_URL:lb://MULTAS}
+          uri: ${MULTAS_SERVICE_URL:lb://MULTAS-SERVICE}
           predicates:
             - Path=/api/v1/multas/**
 
         - id: pagos
-          uri: ${PAGOS_SERVICE_URL:lb://PAGOS}
+          uri: ${PAGOS_SERVICE_URL:lb://PAGOS-SERVICE}
           predicates:
             - Path=/api/v1/pagos/**
 
         - id: cupones
-          uri: ${CUPONES_SERVICE_URL:lb://CUPONES}
+          uri: ${CUPONES_SERVICE_URL:lb://CUPONES-SERVICE}
           predicates:
             - Path=/api/v1/cupones/**
 
         - id: sucursales
-          uri: ${SUCURSALES_SERVICE_URL:lb://SUCURSALES}
+          uri: ${SUCURSALES_SERVICE_URL:lb://SUCURSALES-SERVICE}
           predicates:
             - Path=/api/v1/sucursales/**
-
-management:
-  endpoint:
-    gateway:
-      access: read-only
-  endpoints:
-    web:
-      exposure:
-        include: health,info,gateway
-
-eureka:
-  client:
-    enabled: ${EUREKA_ENABLED:true}
-    service-url:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
-  instance:
-    prefer-ip-address: true

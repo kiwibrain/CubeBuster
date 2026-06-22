@@ -27,7 +27,7 @@ springdoc:
 
 logging:
   level:
-    root: INFO
+    cubeBuster: INFO
     org.springframework.web: WARN
 
 eureka:
@@ -44,8 +44,8 @@ app:
 
 services:
   cliente:
-    url: ${CLIENTE_SERVICE_URL:http://cliente-service}
+    url: ${CLIENTE_SERVICE_URL:http://CLIENTE-SERVICE}
   peliculas:
-    url: ${PELICULAS_SERVICE_URL:http://peliculas-service}
+    url: ${PELICULAS_SERVICE_URL:http://PELICULAS-SERVICE}
   juegos:
-    url: ${JUEGOS_SERVICE_URL:http://juegos-service}
+    url: ${JUEGOS_SERVICE_URL:http://JUEGOS-SERVICE}

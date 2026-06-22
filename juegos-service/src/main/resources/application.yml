@@ -27,7 +27,7 @@ springdoc:
 
 logging:
   level:
-    root: INFO
+    cubeBuster: INFO
     org.springframework.web: WARN
 
 eureka:

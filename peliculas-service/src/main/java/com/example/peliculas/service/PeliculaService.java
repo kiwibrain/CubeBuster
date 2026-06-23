@@ -32,6 +32,7 @@ public class PeliculaService {
         Pelicula nuevaPelicula = new Pelicula();
         nuevaPelicula.setNombrePelicula(request.getNombrePelicula());
         nuevaPelicula.setAnioPelicula(request.getAnioPelicula());
+        nuevaPelicula.setPrecioPelicula(request.getPrecioPelicula());
         nuevaPelicula.setCategoriaPelicula(request.getCategoriaPelicula());
 
         return peliculaRepository.save(nuevaPelicula);

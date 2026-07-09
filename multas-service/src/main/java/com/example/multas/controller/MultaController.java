@@ -20,7 +20,7 @@ public class MultaController {
     public ResponseEntity<List<Multa>> getMultas(){
         List<Multa> multas = multaService.getMultas();
         if(multas.isEmpty()){
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(multas);
     }

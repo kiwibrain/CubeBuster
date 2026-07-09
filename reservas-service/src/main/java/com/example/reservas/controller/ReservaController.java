@@ -22,7 +22,7 @@ public class ReservaController {
     public ResponseEntity<List<Reserva>> getReservas(){
         List<Reserva> reservas = reservaService.getReservas();
         if(reservas.isEmpty()){
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(reservas);
     }

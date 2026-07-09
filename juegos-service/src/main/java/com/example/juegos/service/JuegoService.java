@@ -24,30 +24,31 @@ public class JuegoService {
     // Metodo GET ID
     public Juego getJuego(Long id){
         return juegoRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("Pelicula no encontrada"));
+                .orElseThrow(()-> new RuntimeException("Juego no encontrada"));
     }
 
     // Metodo POST
     public Juego saveJuego(JuegoRequest request) {
-        Juego nuevaPelicula = new Juego();
-        nuevaPelicula.setNombreJuego(request.getNombreJuego());
-        nuevaPelicula.setAnioJuego(request.getAnioJuego());
-        nuevaPelicula.setCategoriaJuego(request.getCategoriaJuego());
+        Juego nuevoJuego = new Juego();
+        nuevoJuego.setNombreJuego(request.getNombreJuego());
+        nuevoJuego.setAnioJuego(request.getAnioJuego());
+        nuevoJuego.setPrecioJuego(request.getPrecioJuego());
+        nuevoJuego.setCategoriaJuego(request.getCategoriaJuego());
 
-        return juegoRepository.save(nuevaPelicula);
+        return juegoRepository.save(nuevoJuego);
     }
 
     // Metodo PUT
     public Juego updateJuego(Long id, JuegoRequest request) {
-        Juego peliculaExistente = getJuego(id);
+        Juego juegoExistente = getJuego(id);
 
-        peliculaExistente.setNombreJuego(request.getNombreJuego());
-        peliculaExistente.setAnioJuego(request.getAnioJuego());
-        peliculaExistente.setPrecioJuego(request.getPrecioJuego());
-        peliculaExistente.setCategoriaJuego(request.getCategoriaJuego());
+        juegoExistente.setNombreJuego(request.getNombreJuego());
+        juegoExistente.setAnioJuego(request.getAnioJuego());
+        juegoExistente.setPrecioJuego(request.getPrecioJuego());
+        juegoExistente.setCategoriaJuego(request.getCategoriaJuego());
 
 
-        return juegoRepository.save(peliculaExistente);
+        return juegoRepository.save(juegoExistente);
     }
 
     // Metodo DELETE

@@ -21,9 +21,6 @@ public class ReclamoController {
     @GetMapping
     public ResponseEntity<List<Reclamo>> getReclamos(){
         List<Reclamo> reclamos = reclamoService.getReclamos();
-        if(reclamos.isEmpty()){
-            return ResponseEntity.notFound().build();
-        }
         return ResponseEntity.ok(reclamos);
     }
 
@@ -39,7 +36,7 @@ public class ReclamoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getPedidoPorId(@PathVariable Long id){
+    public ResponseEntity<?> getReclamoPorId(@PathVariable Long id){
         try {
             Reclamo reclamo = reclamoService.getReclamos(id);
             return ResponseEntity.ok(reclamo);

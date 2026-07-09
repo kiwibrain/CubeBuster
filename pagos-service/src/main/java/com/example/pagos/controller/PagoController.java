@@ -21,8 +21,7 @@ public class PagoController {
     public ResponseEntity<List<Pago>> getPagos(){
         List<Pago> pagos = pagoService.getPagos();
         if(pagos.isEmpty()){
-            return ResponseEntity.notFound().build();
-        }
+            return ResponseEntity.noContent().build();        }
         return ResponseEntity.ok(pagos);
     }
 

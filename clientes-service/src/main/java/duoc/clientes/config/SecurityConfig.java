@@ -26,7 +26,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         // Endpoints públicos
-                        .requestMatchers("/api/v1/clientes/login").permitAll()
+                        .requestMatchers("/api/v2/clientes/login").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/actuator/**").permitAll()

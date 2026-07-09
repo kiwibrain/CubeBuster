@@ -7,7 +7,7 @@ spring:
         - id: clientes
           uri: ${CLIENTE_SERVICE_URL:lb://CLIENTES-SERVICE}
           predicates:
-            - Path=/api/v1/clientes/**
+            - Path=/api/v1/clientes/**, /api/v2/clientes/**
 
         - id: peliculas
           uri: ${PELICULAS_SERVICE_URL:lb://PELICULAS-SERVICE}

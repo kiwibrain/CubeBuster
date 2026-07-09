@@ -33,14 +33,14 @@ docker compose up --build
 ```
 **Nota sobre Datafaker:** Al levantar los contenedores, el sistema detectará automáticamente si las tablas están vacías y utilizará DataFaker para inyectar 10 registros de prueba realistas en cada microservicio.
 
-`![Imagen del los contenedores de CubeBuster levantados correctamente en Docker Desktop](images/docker.png)`
+![Imagen del los contenedores de CubeBuster levantados correctamente en Docker Desktop](images/docker.png)
 
 ---
 ## Servicios y Puertos (Eureka)
 Una vez que Docker finalice (1-2 minutos aprox.), el Servidor Eureka estará disponible para monitorear la salud de los microservicios.
 **Panel de Eureka:** `http://localhost:8761`
 
-`![Imagen de la pagina web de Eureka que muestra todos los servicios funcionando correctamente](images/eureka.png)`
+![Imagen de la pagina web de Eureka que muestra todos los servicios funcionando correctamente](images/eureka.png)
 
 ---
 ## Seguridad y Autenticación (JWT)
@@ -56,7 +56,7 @@ El microservicio de Clientes (y aquellos que dependen de él) se encuentra prote
   }
   ```
 Ingrese las credenciales de prueba configuradas en el sistema. Si la petición es exitosa, el servidor devolverá un código `200 OK` con el Token JWT generado.
-`![Parte inferior de la imagen, se muestra token generado correctamente](images/auth1.png)`
+![Parte inferior de la imagen, se muestra token generado correctamente](images/auth1.png)
 
 ### Paso 2: Usar el Token (Bearer Auth)
 Para consumir endpoints protegidos (como listar clientes o hacer reservas), debe incluir este token en su petición:
@@ -65,7 +65,7 @@ Para consumir endpoints protegidos (como listar clientes o hacer reservas), debe
 3. Pegue el Token generado en el Paso 1.
 4. Lance su petición GET, POST, PUT o DELETE normalmente.
 
-`![Se ingresa el token en Authorization > Bearer Token](images/auth2.png)`
+![Se ingresa el token en Authorization > Bearer Token](images/auth2.png)
 
 ---
 ## Pruebas con Postman (API Gateway)
@@ -74,19 +74,19 @@ A continuación, se presentan los endpoints principales para probar la generaci�
 
 **Clientes**
 ...* GET `http://localhost:8080/api/v1/clientes`
-`![Postman: Datos de tabla Clientes](images/postmanClientes.png)`
+![Postman: Datos de tabla Clientes](images/postmanClientes.png)
 
 **Peliculas**
 ...* GET `http://localhost:8080/api/v1/peliculas`
-`![Postman: Datos de tabla Peliculas](images/postmanPeliculas.png)`
+![Postman: Datos de tabla Peliculas](images/postmanPeliculas.png)
 
 **Juegos**
 ...* GET `http://localhost:8080/api/v1/juegos`
-`![Postman: Datos de tabla Juegos](images/postmanJuegos.png)`
+![Postman: Datos de tabla Juegos](images/postmanJuegos.png)
 
 **Reservas (Ejemplo de Relaciones)**
 ...* GET `http://localhost:8080/api/v1/reservas`
-`![Postman: Datos de tabla Reservas](images/postmanReservas.png)`
+![Postman: Datos de tabla Reservas](images/postmanReservas.png)
 
 **URLs para los otros servicios:**
 ...* **Reclamos:** GET `http://localhost:8080/api/v1/reclamos`

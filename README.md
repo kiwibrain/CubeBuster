@@ -74,19 +74,27 @@ A continuaci√≥n, se presentan los endpoints principales para probar la generaci√
 
 **Clientes**
 ...* GET `http://localhost:8080/api/v1/clientes`
+
 ![Postman: Datos de tabla Clientes](images/postmanClientes.png)
+
 
 **Peliculas**
 ...* GET `http://localhost:8080/api/v1/peliculas`
+
 ![Postman: Datos de tabla Peliculas](images/postmanPeliculas.png)
+
 
 **Juegos**
 ...* GET `http://localhost:8080/api/v1/juegos`
+
 ![Postman: Datos de tabla Juegos](images/postmanJuegos.png)
+
 
 **Reservas (Ejemplo de Relaciones)**
 ...* GET `http://localhost:8080/api/v1/reservas`
+
 ![Postman: Datos de tabla Reservas](images/postmanReservas.png)
+
 
 **URLs para los otros servicios:**
 ...* **Reclamos:** GET `http://localhost:8080/api/v1/reclamos`

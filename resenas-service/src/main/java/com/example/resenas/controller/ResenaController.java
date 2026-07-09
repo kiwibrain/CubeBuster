@@ -21,7 +21,7 @@ public class ResenaController {
     public ResponseEntity<List<Resena>> getResenas(){
         List<Resena> resenas = resenaService.getResenas();
         if(resenas.isEmpty()){
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(resenas);
     }

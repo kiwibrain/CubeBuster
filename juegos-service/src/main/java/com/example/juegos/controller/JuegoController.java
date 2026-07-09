@@ -39,14 +39,14 @@ public class JuegoController {
 
     // PUT: Actualizar una película existente
     @PutMapping("/{id}")
-    public ResponseEntity<Juego> actualizarPelicula(@PathVariable Long id, @Valid @RequestBody JuegoRequest request) {
-        Juego peliculaActualizada = juegoService.updateJuego(id, request);
-        return ResponseEntity.ok(peliculaActualizada);
+    public ResponseEntity<Juego> updateJuego(@PathVariable Long id, @Valid @RequestBody JuegoRequest request) {
+        Juego juegoActualizado = juegoService.updateJuego(id, request);
+        return ResponseEntity.ok(juegoActualizado);
     }
 
     // DELETE: Eliminar una película
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarPelicula(@PathVariable Long id) {
+    public ResponseEntity<Void> eliminarJuego(@PathVariable Long id) {
         juegoService.deleteJuego(id);
         return ResponseEntity.noContent().build();
     }

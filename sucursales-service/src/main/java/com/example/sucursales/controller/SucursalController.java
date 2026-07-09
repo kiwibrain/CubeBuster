@@ -21,7 +21,7 @@ public class SucursalController {
     public ResponseEntity<List<Sucursal>> getSucursales(){
         List<Sucursal> sucursales = sucursalService.getSucursales();
         if(sucursales.isEmpty()){
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(sucursales);
     }

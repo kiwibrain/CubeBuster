@@ -20,9 +20,6 @@ public class CuponController {
     @GetMapping
     public ResponseEntity<List<Cupon>> getCupones(){
         List<Cupon> cupones = cuponService.getCupones();
-        if(cupones.isEmpty()){
-            return ResponseEntity.notFound().build();
-        }
         return ResponseEntity.ok(cupones);
     }
 

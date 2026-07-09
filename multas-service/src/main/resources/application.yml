@@ -2,6 +2,8 @@ server:
   port: ${PORT:8090}
 
 spring:
+  profiles:
+    active: dev
   application:
     name: multas-service
   datasource:

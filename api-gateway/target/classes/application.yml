@@ -1,11 +1,11 @@
 spring:
-  flyway:
-    enabled: false
+  application:
+    name: api-gateway
   cloud:
     gateway:
       routes:
         - id: clientes
-          uri: ${CLIENTE_SERVICE_URL:lb://CLIENTE-SERVICE}
+          uri: ${CLIENTE_SERVICE_URL:lb://CLIENTES-SERVICE}
           predicates:
             - Path=/api/v1/clientes/**
 
@@ -15,7 +15,7 @@ spring:
             - Path=/api/v1/peliculas/**
 
         - id: juegos
-          uri: ${JUEGOS_SERVICE_URL:lb://JUEGOS-SERVICE}  e
+          uri: ${JUEGOS_SERVICE_URL:lb://JUEGOS-SERVICE}
           predicates:
             - Path=/api/v1/juegos/**
 
@@ -53,3 +53,9 @@ spring:
           uri: ${SUCURSALES_SERVICE_URL:lb://SUCURSALES-SERVICE}
           predicates:
             - Path=/api/v1/sucursales/**
+
+eureka:
+  client:
+    enabled: ${EUREKA_ENABLED:true}
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}

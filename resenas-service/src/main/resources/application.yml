@@ -2,6 +2,8 @@ server:
   port: ${PORT:8086}
 
 spring:
+  profiles:
+    active: dev
   application:
     name: resenas-service
   datasource:

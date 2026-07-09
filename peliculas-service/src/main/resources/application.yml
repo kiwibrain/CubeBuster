@@ -2,13 +2,15 @@ server:
   port: ${PORT:8082}
 
 spring:
+  profiles:
+    active: dev
   application:
     name: peliculas-service
   datasource:
-    url: jdbc:h2:mem:peliculas_service_db;DB_CLOSE_DELAY=-1;MODE=MySQL
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+    url: ${DB_URL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update

@@ -2,6 +2,8 @@ server:
   port: ${PORT:8087}
 
 spring:
+  profiles:
+    active: dev
   application:
     name: pagos-service
   datasource:

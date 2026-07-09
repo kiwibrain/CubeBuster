@@ -21,6 +21,9 @@ services:
       - eureka-server
     environment:
       - EUREKA_URL=http://eureka-server:8761/eureka/
+      - DB_URL=jdbc:mysql://cubebuster-fullstack02-duocuc-5098.j.aivencloud.com:27356/defaultdb?sslMode=REQUIRED
+      - DB_USER=avnadmin
+      - DB_PASSWORD=AVNS_fRxthmMMFqhHV5mJkFU
 
   peliculas-service:
     build: ./peliculas-service

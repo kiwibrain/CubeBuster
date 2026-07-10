@@ -35,12 +35,14 @@ docker compose up --build
 
 ![Imagen del los contenedores de CubeBuster levantados correctamente en Docker Desktop](images/docker.png)
 
+
 ---
 ## Servicios y Puertos (Eureka)
 Una vez que Docker finalice (1-2 minutos aprox.), el Servidor Eureka estará disponible para monitorear la salud de los microservicios.
 **Panel de Eureka:** `http://localhost:8761`
 
 ![Imagen de la pagina web de Eureka que muestra todos los servicios funcionando correctamente](images/eureka.png)
+
 
 ---
 ## Seguridad y Autenticación (JWT)
@@ -56,7 +58,9 @@ El microservicio de Clientes (y aquellos que dependen de él) se encuentra prote
   }
   ```
 Ingrese las credenciales de prueba configuradas en el sistema. Si la petición es exitosa, el servidor devolverá un código `200 OK` con el Token JWT generado.
+
 ![Parte inferior de la imagen, se muestra token generado correctamente](images/auth1.png)
+
 
 ### Paso 2: Usar el Token (Bearer Auth)
 Para consumir endpoints protegidos (como listar clientes o hacer reservas), debe incluir este token en su petición:
@@ -66,6 +70,7 @@ Para consumir endpoints protegidos (como listar clientes o hacer reservas), debe
 4. Lance su petición GET, POST, PUT o DELETE normalmente.
 
 ![Se ingresa el token en Authorization > Bearer Token](images/auth2.png)
+
 
 ---
 ## Pruebas con Postman (API Gateway)
@@ -119,6 +124,7 @@ El proyecto también se encuentra desplegado en la nube para acceso público, se
 
 Para probar el proyecto en la nube, utilice la URL anterior en Postman seguido de las rutas correspondientes (ej: `.../api/v1/clientes`).
 
+![Pagina de Render. Muestra todos los servicios funcionando](images/render.jpeg)
 
 
 
